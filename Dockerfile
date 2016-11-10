@@ -7,8 +7,8 @@ ENV GIT_PRJ jax-rs-service-template-swarm
 
 RUN apt-get update
 RUN apt-get install -y --force-yes --no-install-recommends \
-	git
-	maven
+	git \
+	maven \
 	openjdk-${JAVA_VER}-jre
 
 RUN git clone https://github.com/${GITHUB_USR}/${GIT_PRJ}.git
