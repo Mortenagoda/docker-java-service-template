@@ -11,7 +11,6 @@ RUN apt-get install -y --force-yes --no-install-recommends \
 	maven \
 	openjdk-${JAVA_VER}-jre
 
-RUN git clone https://github.com/${GITHUB_USR}/${GIT_PRJ}.git
-RUN cd ${GIT_PRJ}
+RUN git clone https://github.com/${GITHUB_USR}/${GIT_PRJ}.git ~/
 ENV JAVA_HOME /usr/lib/jvm/java-${JAVA_VER}-openjdk-amd64/
-RUN mvn package
+RUN cd ~/${GIT_PRJ} && mvn package
