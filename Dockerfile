@@ -13,5 +13,5 @@ RUN apt-get install -y --force-yes --no-install-recommends \
 
 RUN git clone https://github.com/${GITHUB_USR}/${GIT_PRJ}.git
 RUN cd ${GIT_PRJ}
-RUN export JAVA_HOME=/usr/lib/jvm/java-${JAVA_VER}-openjdk-amd64/
+RUN export JAVA_HOME="/usr/lib/jvm/java-${JAVA_VER}-openjdk-amd64/"
 RUN mvn package
