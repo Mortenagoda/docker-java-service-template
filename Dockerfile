@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -y --force-yes --no-install-recommends \
 	git \
 	maven \
-	openjdk-${JAVA_VER}-jre
+	openjdk-${JAVA_VER}-jdk
 
 RUN git clone https://github.com/${GITHUB_USR}/${GIT_PRJ}.git ~/${GIT_PRJ}
 ENV JAVA_HOME /usr/lib/jvm/java-${JAVA_VER}-openjdk-amd64/
